@@ -2,8 +2,11 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Almas" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+         <item name="colorPrimary">@color/lightGreen</item>
+         <item name="colorPrimaryDark">@color/darkGreen</item>
+         <item name="fontFamily">@font/b_yekan</item>
     </style>
+
 
     <style name="Theme.Almas" parent="Base.Theme.Almas" />
 </resources>

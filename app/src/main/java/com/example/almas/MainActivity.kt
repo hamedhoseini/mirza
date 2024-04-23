@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         userNameTV = findViewById(R.id.userName_tv)
         passwordTV = findViewById(R.id.password_tv)
         enterBtn = findViewById(R.id.enter_btn)
