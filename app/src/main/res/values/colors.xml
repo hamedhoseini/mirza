@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="backGround">#7209B7</color>
+    <color name="reservedTextColor">#adb5bd</color>
+    <color name="menuBackground">#023047</color>
+    <color name="menuCardView">#219ebc</color>
+    <color name="toosi">#8d99ae</color>
+</resources>
