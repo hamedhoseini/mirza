@@ -66,7 +66,7 @@ class LoginActivity : AppCompatActivity() {
     private fun showToast(message: String) {
         Toast.makeText(
             this@LoginActivity,
-            "نام کاربری یا رمز عبور اشتباه است.",
+            message,
             Toast.LENGTH_SHORT
         ).show()
     }
