@@ -1,12 +1,16 @@
 package com.example.almas
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.preference.PreferenceManager
+import android.preference.PreferenceManager.getDefaultSharedPreferences
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import com.example.almas.data.repository.MirzaRepository
+import com.mihahoni.productslistapp.util.Constants
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.runBlocking
 import javax.inject.Inject
@@ -51,6 +55,9 @@ class LoginActivity : AppCompatActivity() {
                 )
 
                 if (loginResponse[0].token != null) {
+
+                    saveTokenToSP(loginResponse[0].token)
+
                     val intent = Intent(this@LoginActivity, MainActivity::class.java)
                     startActivity(intent)
                     finish()
@@ -60,6 +67,14 @@ class LoginActivity : AppCompatActivity() {
             } catch (exception: Exception) {
                 showToast("نام کاربری یا رمز عبور اشتباه است.")
             }
+        }
+    }
+
+    private fun saveTokenToSP(token: String?) {
+        val sharedPref = getDefaultSharedPreferences(this) ?: return
+        with(sharedPref.edit()) {
+            putString(Constants.TOKEN_KEY, token)
+            apply()
         }
     }
 
