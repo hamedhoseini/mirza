@@ -34,10 +34,10 @@
             android:name=".Title"
             android:exported="false" />
         <activity
-            android:name=".MainMenuActivity2"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:exported="false">
 
         </activity>
