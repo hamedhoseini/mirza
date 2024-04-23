@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Editable
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
@@ -12,8 +11,6 @@ import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
-import androidx.lifecycle.viewmodel.CreationExtras
-import com.example.almas.Title
 
 class SalePage : AppCompatActivity() {
 
@@ -57,7 +54,7 @@ class SalePage : AppCompatActivity() {
 
         saleSubmitBtn = findViewById(R.id.sale_submit_btn)
         saleSubmitBtn.setOnClickListener {
-            val intent = Intent(this,MainMenuActivity2::class.java)
+            val intent = Intent(this,MainActivity::class.java)
             startActivity(intent)
             Toast.makeText(this,"فاکتور ثبت شد" , Toast.LENGTH_SHORT).show()
             finish()

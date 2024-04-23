@@ -78,7 +78,7 @@ class Title : AppCompatActivity() {
 
         titleSubmitBtn = findViewById(R.id.title_submit_btn)
         titleSubmitBtn.setOnClickListener {
-            val intent = Intent(this,MainMenuActivity2::class.java)
+            val intent = Intent(this,MainActivity::class.java)
             startActivity(intent)
             Toast.makeText(this,"تیتر ثبت شد" , Toast.LENGTH_SHORT).show()
             finish()
