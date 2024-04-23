@@ -7,26 +7,28 @@
     android:orientation="vertical"
     tools:context=".MainActivity"
 
-    android:background="@color/backGround"
+    android:background="@drawable/login_background"
+
 
 
     >
 
-    <TextView
+    <!--<TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="الماس"
+        android:text="میرزا"
         android:layout_marginTop="150dp"
         android:textSize="30sp"
         android:textColor="@color/white"
         android:textStyle="bold"
         android:gravity="center_horizontal"
-        />
+
+        />-->
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="200dp"
         android:gravity="center_horizontal"
         android:layout_marginHorizontal="20sp"
         app:cardCornerRadius="15dp"
@@ -45,7 +47,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:gravity="center_horizontal"
-                android:text="خوش آمدید"
+                android:text="میرزا"
                 android:textSize="35sp"
                 android:textStyle="bold"
 
@@ -113,7 +115,7 @@
                 android:text="ورود"
                 android:textSize="18sp"
                 android:textColor="@color/white"
-                android:backgroundTint="@color/design_default_color_primary"
+                android:backgroundTint="@color/lightGreen"
 
                 />
 

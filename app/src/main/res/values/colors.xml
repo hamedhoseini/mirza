@@ -7,4 +7,6 @@
     <color name="menuBackground">#023047</color>
     <color name="menuCardView">#219ebc</color>
     <color name="toosi">#8d99ae</color>
+    <color name="lightGreen">#52CC6D</color>
+
 </resources>
