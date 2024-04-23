@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SalePage"
-    android:layout_gravity="center">
+    tools:context=".ProductSubmit">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,132 +12,16 @@
         android:layout_margin="10dp"
         android:orientation="vertical"
         android:padding="10dp"
-
-
-
         >
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ثبت فروش:"
+            android:text="ثبت کالا:"
             android:textSize="35sp"
             android:gravity="center"
             android:textColor="@color/black"
             android:layout_marginBottom="5dp"/>
-
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginVertical="5dp"
-            >
-
-            <Spinner
-                android:id="@+id/customer_name_spinner"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textAlignment="textEnd"
-                />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="نام مشتری"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:gravity="center"/>
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginVertical="5dp"
-            >
-
-            <Spinner
-                android:id="@+id/sale_bar_owner_spinner"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textAlignment="textEnd"
-                />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="نام صاحب بار"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:gravity="center"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginVertical="5dp"
-            >
-
-            <Spinner
-                android:id="@+id/sale_product_name_spinner"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textAlignment="textEnd"
-                />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="اسم محصول"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:gravity="center"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginVertical="5dp"
-            >
-
-            <TextView
-                android:id="@+id/sale_date_tv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textColor="@color/black"
-                tools:text="1402/10/25"
-                android:textSize="20sp"
-                android:gravity="center"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="تاریخ امروز"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:gravity="center"/>
-
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -161,7 +44,92 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="نام بنه"
+                android:text="نام کالا:"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginVertical="5dp"
+            >
+
+            <Spinner
+                android:id="@+id/product_group_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="textEnd"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="گروه کالا"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginVertical="5dp"
+            >
+
+            <Spinner
+                android:id="@+id/unit_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="textEnd"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="واحد"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginVertical="5dp"
+            >
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:hint="وارد کنید"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:inputType="numberDecimal"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="مبلغ فروش (ریال)"
                 android:textSize="20sp"
                 android:textColor="@color/black"
                 android:gravity="center"/>
@@ -185,91 +153,20 @@
                 android:hint="وارد کنید"
                 android:textSize="20sp"
                 android:gravity="center"
-                android:inputType="numberDecimal"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="وزن (کیلوگرم)"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:gravity="center"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginVertical="5dp"
-            >
-
-            <EditText
-                android:id="@+id/sale_fee_et"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textColor="@color/black"
-                android:hint="وارد کنید"
-                android:textSize="20sp"
-                android:gravity="center"
                 android:inputType="number"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="فی (ريال)"
+                android:text="تعداد"
                 android:textSize="20sp"
                 android:textColor="@color/black"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:inputType="number"/>
 
         </LinearLayout>
 
-
-        <Button
-            android:id="@+id/sale_cal_price_btn"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginVertical="5dp"
-            android:text="محاسبه قیمت"
-            android:textSize="20sp"/>
-
-
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginVertical="5dp"
-            >
-
-
-
-            <TextView
-                android:id="@+id/sale_price_tv"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textColor="@color/toosi"
-                android:text="auto generated"
-                android:textSize="20sp"
-                android:gravity="center"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="قابل پرداخت(ريال)"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:gravity="center"/>
-
-        </LinearLayout>
 
         <Button
             android:id="@+id/sale_submit_btn"
@@ -284,4 +181,4 @@
 
 
     </LinearLayout>
-</ScrollView>
+</LinearLayout>

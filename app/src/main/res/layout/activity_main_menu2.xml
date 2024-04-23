@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/menuBackground"
+    android:background="@color/white"
     android:gravity="center">
 
 
@@ -25,29 +25,47 @@
                 android:orientation="horizontal"
                 android:layout_weight="1"
                 >
-                <Button
+                <androidx.cardview.widget.CardView
                     android:id="@+id/sale_btn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="5dp"
+                    android:layout_margin="20dp"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/white"
-                    android:text="فروش"
-                    android:textColor="@color/black"
-                    android:textSize="45sp"
+                    android:backgroundTint="@color/lightGreen"
+                    app:cardElevation="10dp"
+                    app:cardCornerRadius="50dp"
+                    >
 
-                    />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="فروش"
+                        android:textColor="@color/white"
+                        android:textSize="60sp"
+                        android:gravity="center"/>
 
-                <Button
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
                     android:id="@+id/title_btn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="5dp"
+                    android:layout_margin="20dp"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/white"
-                    android:text="ثبت  تیتر"
-                    android:textColor="@color/black"
-                    android:textSize="45sp" />
+                    android:backgroundTint="@color/lightGreen"
+                    app:cardElevation="10dp"
+                    app:cardCornerRadius="50dp"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="ثبت تیتر"
+                        android:textColor="@color/white"
+                        android:textSize="60sp"
+                        android:gravity="center"/>
+
+                </androidx.cardview.widget.CardView>
             </LinearLayout>
 
             <LinearLayout
@@ -56,25 +74,44 @@
                 android:orientation="horizontal"
                 android:layout_weight="1"
                 >
-                <Button
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="5dp"
+                    android:layout_margin="20dp"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/white"
-                    android:text="ثبت کالا"
-                    android:textColor="@color/black"
-                    android:textSize="45sp"
-                    />
-                <Button
+                    android:backgroundTint="@color/lightGreen"
+                    app:cardElevation="10dp"
+                    app:cardCornerRadius="50dp"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="ثبت کالا"
+                        android:textColor="@color/white"
+                        android:textSize="60sp"
+                        android:gravity="center"/>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="5dp"
+                    android:layout_margin="20dp"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/white"
-                    android:text="ثبت مشتری"
-                    android:textColor="@color/black"
-                    android:textSize="45sp"/>
+                    android:backgroundTint="@color/lightGreen"
+                    app:cardElevation="10dp"
+                    app:cardCornerRadius="50dp"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="ثبت مشتری"
+                        android:textColor="@color/white"
+                        android:textSize="60sp"
+                        android:gravity="center"/>
+
+                </androidx.cardview.widget.CardView>
             </LinearLayout>
 
         </LinearLayout>
