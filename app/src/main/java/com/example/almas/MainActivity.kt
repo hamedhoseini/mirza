@@ -5,11 +5,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.WindowManager
 import android.widget.Button
+import androidx.cardview.widget.CardView
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var titrBtn : Button
-    private lateinit var saleBtn : Button
+    private lateinit var titrBtn : CardView
+    private lateinit var saleBtn : CardView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
