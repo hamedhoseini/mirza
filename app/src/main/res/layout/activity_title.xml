@@ -51,7 +51,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:text="کد کامپیوتری"
                 android:textSize="20sp"
                 android:textColor="@color/black"
@@ -80,7 +80,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:text="تاریخ امروز"
                 android:textSize="20sp"
                 android:textColor="@color/black"
@@ -110,7 +110,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:text="شماره بارنامه"
                 android:textSize="20sp"
                 android:textColor="@color/black"
@@ -137,7 +137,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:text="نام صاحب بار"
                 android:textSize="20sp"
                 android:textColor="@color/black"
@@ -190,7 +190,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight=".74"
+                android:layout_weight=".80"
                 android:text="شماره پلاک ماشین"
                 android:textSize="20sp"
                 android:textColor="@color/black"
@@ -219,7 +219,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:text="تناژ خالص (تن)"
                 android:textSize="20sp"
                 android:textColor="@color/black"
@@ -249,7 +249,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:text="کرایه حمل (ريال)"
                 android:textSize="20sp"
                 android:textColor="@color/black"
@@ -278,7 +278,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:text="هزینه تخلیه (ريال)"
                 android:textSize="20sp"
                 android:textColor="@color/black"
