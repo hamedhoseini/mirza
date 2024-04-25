@@ -140,6 +140,8 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/border"
             android:hint="نشانی را وارد کنید"
+            android:lines="5"
+            android:gravity="start"
             />
 
 

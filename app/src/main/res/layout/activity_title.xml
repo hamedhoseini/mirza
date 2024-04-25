@@ -194,7 +194,8 @@
                 android:text="شماره پلاک ماشین"
                 android:textSize="20sp"
                 android:textColor="@color/black"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:lineSpacingExtra="5dp"/>
 
         </LinearLayout>
 
@@ -223,7 +224,8 @@
                 android:text="تناژ خالص (تن)"
                 android:textSize="20sp"
                 android:textColor="@color/black"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:lineSpacingExtra="5dp"/>
 
         </LinearLayout>
 
@@ -253,7 +255,8 @@
                 android:text="کرایه حمل (ريال)"
                 android:textSize="20sp"
                 android:textColor="@color/black"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:lineSpacingExtra="5dp"/>
 
         </LinearLayout>
 
@@ -282,7 +285,8 @@
                 android:text="هزینه تخلیه (ريال)"
                 android:textSize="20sp"
                 android:textColor="@color/black"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:lineSpacingExtra="5dp"/>
 
         </LinearLayout>
 
