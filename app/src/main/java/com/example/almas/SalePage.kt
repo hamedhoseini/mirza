@@ -15,12 +15,13 @@ import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.viewModels
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
 import com.example.almas.util.DateTimeUtil
 import com.example.almas.viewModels.SaleViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class SalePage : ComponentActivity() {
+class SalePage : AppCompatActivity() {
 
     private lateinit var saleSubmitBtn: Button
     private lateinit var saleDateTv: TextView
