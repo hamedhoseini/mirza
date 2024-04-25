@@ -1,16 +1,13 @@
 package com.example.almas
 
-import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.preference.PreferenceManager
-import android.preference.PreferenceManager.getDefaultSharedPreferences
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.almas.data.repository.MirzaRepository
-import com.mihahoni.productslistapp.util.Constants
+import com.example.almas.util.PreferenceUtils
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.runBlocking
 import javax.inject.Inject
@@ -56,7 +53,7 @@ class LoginActivity : AppCompatActivity() {
 
                 if (loginResponse[0].token != null) {
 
-                    saveTokenToSP(loginResponse[0].token)
+                    PreferenceUtils.saveTokenToSP(loginResponse[0].token)
 
                     val intent = Intent(this@LoginActivity, MainActivity::class.java)
                     startActivity(intent)
@@ -70,13 +67,7 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun saveTokenToSP(token: String?) {
-        val sharedPref = getDefaultSharedPreferences(this) ?: return
-        with(sharedPref.edit()) {
-            putString(Constants.TOKEN_KEY, token)
-            apply()
-        }
-    }
+
 
     private fun showToast(message: String) {
         Toast.makeText(

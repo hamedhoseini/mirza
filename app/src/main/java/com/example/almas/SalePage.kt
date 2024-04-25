@@ -2,25 +2,33 @@ package com.example.almas
 
 import android.content.Intent
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ProgressBar
 import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.ComponentActivity
+import androidx.activity.viewModels
 import androidx.annotation.RequiresApi
 import com.example.almas.util.DateTimeUtil
+import com.example.almas.viewModels.SaleViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-class SalePage : AppCompatActivity() {
+@AndroidEntryPoint
+class SalePage : ComponentActivity() {
 
-    private lateinit var saleSubmitBtn : Button
-    private lateinit var saleDateTv : TextView
-    private lateinit var saleWeightEt : EditText
-    private lateinit var saleFeeEt : EditText
-    private lateinit var salePriceTv : TextView
-    private lateinit var saleCalPriceBtn :Button
+    private lateinit var saleSubmitBtn: Button
+    private lateinit var saleDateTv: TextView
+    private lateinit var saleWeightEt: EditText
+    private lateinit var saleFeeEt: EditText
+    private lateinit var salePriceTv: TextView
+    private lateinit var saleCalPriceBtn: Button
+    val saleViewModel by viewModels<SaleViewModel>()
 
 
     @RequiresApi(Build.VERSION_CODES.O)
@@ -29,35 +37,51 @@ class SalePage : AppCompatActivity() {
         setContentView(R.layout.activity_sale_page)
 
 
-        val customerNameSpinner : Spinner = findViewById(R.id.customer_name_spinner)
-        val customerNameSpinnerArray = arrayOf("انتخاب کنید","آرشا","کیانوش","هیراد","شروین","ایلیا","آیین")
-        val customerNameSpinnerAdapter =
-            ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, customerNameSpinnerArray)
-        customerNameSpinner.adapter = customerNameSpinnerAdapter
+        val customerNameSpinner: Spinner = findViewById(R.id.customer_name_spinner)
+        val customerNameLoading: ProgressBar = findViewById(R.id.customer_name_loading)
 
-
-
+        saleViewModel.moshtariList.observe(this) {
+            customerNameLoading.visibility=View.GONE
+            val moshtariArray = it.map { it.mnf }
+            val moshtariArrayAdapter =
+                ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, moshtariArray)
+            customerNameSpinner.adapter = moshtariArrayAdapter
+        }
 
         val saleBarOwnerSpiner: Spinner = findViewById(R.id.sale_bar_owner_spinner)
-        val saleBarOwnreArray = arrayOf("انتخاب کنید", "احمد", "محمد", "حسین", "اکبر", "اصغر", "حسن")
-        val saleBarOwnreArrayAdapter =
-            ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, saleBarOwnreArray)
-        saleBarOwnerSpiner.adapter = saleBarOwnreArrayAdapter
+        val ownerNameLoading: ProgressBar = findViewById(R.id.owner_name_loading)
 
+        saleViewModel.sahebKalaList.observe(this) {
+            ownerNameLoading.visibility=View.GONE
+            val saleBarOwnreArray = it.map { it.sahebKala }
+            val saleBarOwnreArrayAdapter =
+                ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, saleBarOwnreArray)
+            saleBarOwnerSpiner.adapter = saleBarOwnreArrayAdapter
+        }
 
 
         val saleProductNameSpiner: Spinner = findViewById(R.id.sale_product_name_spinner)
-        val saleProductNameArray = arrayOf("انتخاب کنید", "گوجه", "خیار", "سیب", "موز", "پرتقال", "انار", "هندوانه", "طالبی", "خربزه", "کیوی")
-        val saleProductNameArrayAdapter =
-            ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, saleProductNameArray)
-        saleProductNameSpiner.adapter = saleProductNameArrayAdapter
+        val productNameLoading: ProgressBar = findViewById(R.id.product_name_loading)
+
+        saleViewModel.productsList.observe(this) {
+            productNameLoading.visibility=View.GONE
+            val saleProductNameArray = it.map { it.kalaName }
+            val saleProductNameArrayAdapter =
+                ArrayAdapter(
+                    this,
+                    android.R.layout.simple_spinner_dropdown_item,
+                    saleProductNameArray
+                )
+            saleProductNameSpiner.adapter = saleProductNameArrayAdapter
+
+        }
 
 
         saleSubmitBtn = findViewById(R.id.sale_submit_btn)
         saleSubmitBtn.setOnClickListener {
-            val intent = Intent(this,MainActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
-            Toast.makeText(this,"فاکتور ثبت شد" , Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "فاکتور ثبت شد", Toast.LENGTH_SHORT).show()
             finish()
         }
 
@@ -82,10 +106,6 @@ class SalePage : AppCompatActivity() {
 //
 //
 //        }
-
-
-
-
 
 
     }

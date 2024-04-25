@@ -9,6 +9,7 @@ import android.content.Intent
 import android.os.Handler
 import android.preference.PreferenceManager.getDefaultSharedPreferences
 import android.util.Log
+import com.example.almas.util.PreferenceUtils
 import com.mihahoni.productslistapp.util.Constants
 
 
@@ -44,10 +45,7 @@ class StartUpScreen : AppCompatActivity() {
     }
 
     private fun isLogin(): Boolean {
-        val sharedPref = getDefaultSharedPreferences(this) ?: return false
-        val token = sharedPref.getString(Constants.TOKEN_KEY, "")
-        Log.i("99999", token.toString() + "  " + !token.isNullOrEmpty())
-        return !token.isNullOrEmpty()
+        return !PreferenceUtils.getToken().isNullOrEmpty()
     }
 
 
