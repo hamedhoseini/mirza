@@ -51,7 +51,8 @@
                     android:layout_height="match_parent"
                     android:text="فروش"
                     android:textColor="@color/white"
-                    android:textSize="60sp"
+                    android:textSize="50sp"
+                    android:padding="5dp"
                     android:gravity="center"/>
 
             </androidx.cardview.widget.CardView>
@@ -72,7 +73,8 @@
                     android:layout_height="match_parent"
                     android:text="ثبت تیتر"
                     android:textColor="@color/white"
-                    android:textSize="60sp"
+                    android:textSize="50sp"
+                    android:padding="5dp"
                     android:gravity="center"/>
 
             </androidx.cardview.widget.CardView>
@@ -85,6 +87,7 @@
             android:layout_weight="1"
             >
             <androidx.cardview.widget.CardView
+                android:id="@+id/product_submit_btn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="20dp"
@@ -99,11 +102,16 @@
                     android:layout_height="match_parent"
                     android:text="ثبت کالا"
                     android:textColor="@color/white"
-                    android:textSize="60sp"
+                    android:textSize="50sp"
+                    android:padding="5dp"
                     android:gravity="center"/>
 
             </androidx.cardview.widget.CardView>
+
+
             <androidx.cardview.widget.CardView
+
+                android:id="@+id/customer_submit_btn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="20dp"
@@ -118,8 +126,10 @@
                     android:layout_height="match_parent"
                     android:text="ثبت مشتری"
                     android:textColor="@color/white"
-                    android:textSize="60sp"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:textSize="50sp"
+                    android:padding="5dp"
+                    />
 
             </androidx.cardview.widget.CardView>
         </LinearLayout>
