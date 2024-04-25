@@ -3,9 +3,16 @@ package com.example.almas
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.WindowManager
 import androidx.cardview.widget.CardView
+import com.example.almas.data.repository.MirzaRepository
+import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.runBlocking
+import javax.inject.Inject
+import kotlin.math.log
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var titrBtn : CardView
@@ -13,6 +20,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var productSubmitBtn : CardView
     private lateinit var customerSubmitBtn : CardView
 
+    @Inject
+    lateinit var mirzaRepository: MirzaRepository
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,7 +41,6 @@ class MainActivity : AppCompatActivity() {
         titrBtn = findViewById(R.id.title_btn)
 
         titrBtn.setOnClickListener{
-
            var intent = Intent(this , Title :: class.java )
             startActivity(intent)
 

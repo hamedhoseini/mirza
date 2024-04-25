@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SalePage"
-    android:layout_gravity="center">
+    android:layout_gravity="center"
+    tools:context=".SalePage">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,46 +13,56 @@
         android:layout_margin="10dp"
         android:orientation="vertical"
         android:padding="10dp"
-
-
-
         >
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ثبت فروش:"
-            android:textSize="35sp"
+            android:layout_marginBottom="5dp"
             android:gravity="center"
+            android:text="ثبت فروش:"
             android:textColor="@color/black"
-            android:layout_marginBottom="5dp"/>
-
+            android:textSize="35sp" />
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
             android:layout_marginVertical="5dp"
-            >
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-            <Spinner
-                android:id="@+id/customer_name_spinner"
+
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textAlignment="textEnd"
-                />
+                android:layout_weight="1">
+
+                <Spinner
+                    android:id="@+id/customer_name_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textEnd" />
+
+                <ProgressBar
+                    android:id="@+id/customer_name_loading"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
+                android:gravity="center"
                 android:text="نام مشتری"
-                android:textSize="20sp"
                 android:textColor="@color/black"
-                android:gravity="center"/>
+                android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -60,171 +70,191 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
             android:layout_marginVertical="5dp"
-            >
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-            <Spinner
-                android:id="@+id/sale_bar_owner_spinner"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textAlignment="textEnd"
-                />
+                android:layout_weight="1">
+
+
+                <ProgressBar
+                    android:id="@+id/owner_name_loading"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:visibility="visible" />
+
+                <Spinner
+                    android:id="@+id/sale_bar_owner_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textEnd" />
+            </RelativeLayout>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
+                android:gravity="center"
                 android:text="نام صاحب بار"
-                android:textSize="20sp"
                 android:textColor="@color/black"
-                android:gravity="center"/>
+                android:textSize="20sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
             android:layout_marginVertical="5dp"
-            >
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-            <Spinner
-                android:id="@+id/sale_product_name_spinner"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textAlignment="textEnd"
-                />
+                android:layout_weight="1">
+
+                <Spinner
+                    android:id="@+id/sale_product_name_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="textEnd" />
+
+                <ProgressBar
+                    android:id="@+id/product_name_loading"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
+                android:gravity="center"
                 android:text="اسم محصول"
-                android:textSize="20sp"
                 android:textColor="@color/black"
-                android:gravity="center"/>
+                android:textSize="20sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
             android:layout_marginVertical="5dp"
-            >
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/sale_date_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:textColor="@color/black"
-                tools:text="1402/10/25"
                 android:textSize="20sp"
-                android:gravity="center"/>
+                tools:text="1402/10/25" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
+                android:gravity="center"
                 android:text="تاریخ امروز"
-                android:textSize="20sp"
                 android:textColor="@color/black"
-                android:gravity="center"/>
+                android:textSize="20sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
             android:layout_marginVertical="5dp"
-            >
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textColor="@color/black"
+                android:gravity="center"
                 android:hint="وارد کنید"
-                android:textSize="20sp"
-                android:gravity="center"/>
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
+                android:gravity="center"
                 android:text="نام بنه"
-                android:textSize="20sp"
                 android:textColor="@color/black"
-                android:gravity="center"/>
+                android:textSize="20sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
             android:layout_marginVertical="5dp"
-            >
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
             <EditText
                 android:id="@+id/sale_weight_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textColor="@color/black"
-                android:hint="وارد کنید"
-                android:textSize="20sp"
                 android:gravity="center"
-                android:inputType="numberDecimal"/>
+                android:hint="وارد کنید"
+                android:inputType="numberDecimal"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
+                android:gravity="center"
                 android:text="وزن (کیلوگرم)"
-                android:textSize="20sp"
                 android:textColor="@color/black"
-                android:gravity="center"/>
+                android:textSize="20sp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
             android:layout_marginVertical="5dp"
-            >
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
             <EditText
                 android:id="@+id/sale_fee_et"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textColor="@color/black"
-                android:hint="وارد کنید"
-                android:textSize="20sp"
                 android:gravity="center"
-                android:inputType="number"/>
+                android:hint="وارد کنید"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
+                android:gravity="center"
                 android:text="فی (ريال)"
-                android:textSize="20sp"
                 android:textColor="@color/black"
-                android:gravity="center"/>
+                android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -235,19 +265,15 @@
             android:layout_height="wrap_content"
             android:layout_marginVertical="5dp"
             android:text="محاسبه قیمت"
-            android:textSize="20sp"/>
-
-
+            android:textSize="20sp" />
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
             android:layout_marginVertical="5dp"
-            >
-
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
 
             <TextView
@@ -255,19 +281,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textColor="@color/toosi"
+                android:gravity="center"
                 android:text="auto generated"
-                android:textSize="20sp"
-                android:gravity="center"/>
+                android:textColor="@color/toosi"
+                android:textSize="20sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:text="قابل پرداخت(ريال)"
-                android:textSize="20sp"
                 android:textColor="@color/black"
-                android:gravity="center"/>
+                android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -275,12 +301,12 @@
             android:id="@+id/sale_submit_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="60dp"
             android:layout_marginTop="80dp"
             android:layout_marginBottom="30dp"
-            android:layout_marginHorizontal="60dp"
             android:text="ثبت"
             android:textColor="@color/white"
-            android:textSize="30sp"/>
+            android:textSize="30sp" />
 
 
     </LinearLayout>
