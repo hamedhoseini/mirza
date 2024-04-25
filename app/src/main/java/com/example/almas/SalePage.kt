@@ -11,6 +11,7 @@ import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+import com.example.almas.util.DateTimeUtil
 
 class SalePage : AppCompatActivity() {
 
@@ -61,7 +62,7 @@ class SalePage : AppCompatActivity() {
         }
 
         saleDateTv = findViewById(R.id.sale_date_tv)
-        fillCurrentDateTextView(saleDateTv)
+        DateTimeUtil.fillCurrentDateTextView(saleDateTv)
 
 //        saleWeightEt = findViewById(R.id.sale_weight_et)
 //        saleFeeEt = findViewById(R.id.sale_fee_et)

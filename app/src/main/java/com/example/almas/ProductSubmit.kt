@@ -17,7 +17,7 @@ class ProductSubmit : AppCompatActivity() {
         productGroupSpinner.adapter = productGroupSpinnerAdapter
 
 
-        val unitSpinner : Spinner = findViewById(R.id.product_group_spinner)
+        val unitSpinner : Spinner = findViewById(R.id.unit_spinner)
         val unitSpinnerArray = arrayOf("انتخاب کنید","کیلوگرم","عدد")
         val unitSpinnerAdapter =
             ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, unitSpinnerArray)
