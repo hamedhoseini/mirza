@@ -19,7 +19,7 @@ class TitleProductsAdapter(private var userArrayList: ArrayList<TitleProductsTab
         viewHolder.tvPackaging.text = userArrayList[i].pacaging
         viewHolder.tvBone.text = userArrayList[i].bone
         viewHolder.tvNumberOfProducts.text = userArrayList[i].numberOfProduct.toString()
-        viewHolder.tvproductName.text = userArrayList[i].productName
+        viewHolder.tvProductName.text = userArrayList[i].productName
     }
 
     override fun getItemCount(): Int {
@@ -30,7 +30,7 @@ class TitleProductsAdapter(private var userArrayList: ArrayList<TitleProductsTab
         val tvPackaging: TextView = itemView.findViewById(R.id.tv_packaging)
         val tvBone: TextView = itemView.findViewById(R.id.tv_bone)
         val tvNumberOfProducts: TextView = itemView.findViewById(R.id.tv_number_of_products)
-        val tvproductName : TextView = itemView.findViewById(R.id.tv_product_name)
+        val tvProductName : TextView = itemView.findViewById(R.id.tv_product_name)
 
     }
 }

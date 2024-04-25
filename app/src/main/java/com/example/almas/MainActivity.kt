@@ -32,8 +32,8 @@ class MainActivity : AppCompatActivity() {
 
         saleBtn = findViewById(R.id.sale_btn)
         saleBtn.setOnClickListener {
-            var intent2 = Intent(this , SalePage :: class.java )
-            startActivity(intent2)
+            val salePageIntent = Intent(this , SalePage :: class.java )
+            startActivity(salePageIntent)
         }
 
 
@@ -41,20 +41,21 @@ class MainActivity : AppCompatActivity() {
         titrBtn = findViewById(R.id.title_btn)
 
         titrBtn.setOnClickListener{
-           var intent = Intent(this , Title :: class.java )
-            startActivity(intent)
+
+           val titlePageIntent = Intent(this , Title :: class.java )
+            startActivity(titlePageIntent)
 
         }
         productSubmitBtn = findViewById(R.id.product_submit_btn)
         productSubmitBtn.setOnClickListener {
-            var intent3 = Intent(this , ProductSubmit :: class.java )
-            startActivity(intent3)
+            val productSubmitIntent = Intent(this , ProductSubmit :: class.java )
+            startActivity(productSubmitIntent)
         }
 
         customerSubmitBtn = findViewById(R.id.customer_submit_btn)
         customerSubmitBtn.setOnClickListener {
-            var intent4 = Intent(this , CustumerSubmit :: class.java )
-            startActivity(intent4)
+            val customerSubmitIntent = Intent(this , CustumerSubmit :: class.java )
+            startActivity(customerSubmitIntent)
         }
 
 

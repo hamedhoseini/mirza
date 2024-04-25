@@ -15,6 +15,7 @@ import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.viewModels
 import androidx.annotation.RequiresApi
+import com.example.almas.util.DateTimeUtil
 import com.example.almas.viewModels.SaleViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -85,7 +86,7 @@ class SalePage : ComponentActivity() {
         }
 
         saleDateTv = findViewById(R.id.sale_date_tv)
-        fillCurrentDateTextView(saleDateTv)
+        DateTimeUtil.fillCurrentDateTextView(saleDateTv)
 
 //        saleWeightEt = findViewById(R.id.sale_weight_et)
 //        saleFeeEt = findViewById(R.id.sale_fee_et)

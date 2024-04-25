@@ -294,17 +294,6 @@
             android:layout_marginTop="15dp"
             >
 
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight=".7"
-                android:text="لیست محصولات:"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:gravity="center"/>
-
             <Button
                 android:id="@+id/btn_add_product"
                 android:layout_width="match_parent"
@@ -316,17 +305,34 @@
                 android:gravity="center"
                 android:layout_marginHorizontal="70dp"/>
 
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".7"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="2dp"
+                android:text="لیست محصولات:"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:gravity="start"
+                />
+
+
+
         </LinearLayout>
 
 
-        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        <!--<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:stretchColumns="1,2,3,4,5,6,7"
-            android:layout_margin="5dp">
+            android:layout_marginVertical="5dp">
 
 
-            <TableRow>
+            &lt;!&ndash;<TableRow>
                 <TextView
                     android:layout_width="110dp"
                     android:text="نوع بسته بندی"
@@ -371,17 +377,20 @@
                     android:background="@drawable/border"
                     />
 
-            </TableRow>
+            </TableRow>&ndash;&gt;
 
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/title_product_recyclerView"
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
 
-                />
 
-        </TableLayout>
+        </TableLayout>-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/title_product_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+
+
+            />
 
         <Button
             android:id="@+id/title_submit_btn"
